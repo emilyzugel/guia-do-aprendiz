@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escritório - Guia do Aprendiz</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <style>
+    .escritorio-content {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .logout-btn {
+      margin-top: 2rem;
+      padding: 0.5rem 1rem;
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+
+    .logout-btn:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+
+<body>
+  <header-c></header-c>
+
+  <main class="escritorio-content">
+    <div class="container">
+      <h1>Página do Escritório</h1>
+      <p>Bem-vindo à área do escritório! Aqui você encontrará informações sobre rotinas, procedimentos e diretrizes.</p>
+
+      <button class="logout-btn" onclick="logout()">Sair</button>
+    </div>
+  </main>
+
+  <footer-c></footer-c>
+
+  <script src="./components/header.js"></script>
+  <script src="./components/footer.js"></script>
+
+  <script>
+    // Verifica se o usuário está logado
+    function checkLogin() {
+      const isLoggedIn = localStorage.getItem('isLoggedIn');
+      if (!isLoggedIn || isLoggedIn !== 'true') {
+        window.location.href = 'index.html';
+      }
+    }
+
+    // Função de logout
+    function logout() {
+      localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('username');
+      window.location.href = 'index.html';
+    }
+
+    // Verifica o login quando a página carrega
+    document.addEventListener('DOMContentLoaded', checkLogin);
+  </script>
+</body>
+
+</html>
