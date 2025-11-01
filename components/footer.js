@@ -20,7 +20,7 @@ class Footer extends HTMLElement {
             <div class="menu">
               <ul><strong>Tópicos</strong></ul>
                 <li class="scale"><a href="inicio.html">Pagina Inicial</a></li>
-                <li class="scale"><a href="escritorio.html">Escritório</a></li>
+                <li class="scale"><a href="tarefas.html">Tarefas</a></li>
                 <li class="scale"><a href="deposito.html">Depósito</a></li>
                 <li class="scale"><a href="quem-somos.html">Quem Somos</a></li>
             </div>
