@@ -7,8 +7,10 @@ class LogIn extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <section class="login">
-        <div class="modal-overlay" id="loginModal" style="display: none;">
+        <div class="modal-overlay" id="loginModal">
           <div class="login-modal">
+            <span class="close-btn" onclick="this.closest('login-c').hideModal()">&times;</span>
+            
             <div class="logo">
               <h2>Acesso Restrito</h2>
               <p>Faça login para acessar o guia</p>
@@ -27,7 +29,7 @@ class LogIn extends HTMLElement {
 
               <button type="submit" class="btn-login">Entrar</button>
 
-              <div class="error-message" id="errorMessage" style="display: none;">
+              <div class="error-message" id="errorMessage">
                 Usuário ou senha incorretos. Tente novamente.
               </div>
             </form>
@@ -40,10 +42,10 @@ class LogIn extends HTMLElement {
       </section>
     `;
 
-    // Adiciona event listener após o elemento ser renderizado
+    // Adiciona event listeners após renderizar
     setTimeout(() => {
       this.setupEventListeners();
-    }, 0);
+    }, 100);
   }
 
   setupEventListeners() {
@@ -53,29 +55,43 @@ class LogIn extends HTMLElement {
     if (loginForm) {
       loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
+        e.stopPropagation();
         this.handleLogin();
+        return false;
       });
+    }
+
+    // Esconde mensagem de erro inicialmente
+    if (errorMessage) {
+      errorMessage.style.display = 'none';
     }
   }
 
   handleLogin() {
-    // SOLUÇÃO NUCLEAR - testa se o redirecionamento funciona
-    console.log('FORÇANDO REDIRECIONAMENTO');
-    window.location.href = 'escritorio.html';
-    return false;
-  }
-
-  setupEventListeners() {
-    const loginForm = document.getElementById('loginForm');
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
     const errorMessage = document.getElementById('errorMessage');
 
-    if (loginForm) {
-      loginForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // ISSO É IMPORTANTE!
-        e.stopPropagation(); // PARA TUDO
-        this.handleLogin();
-        return false;
-      });
+    console.log('Tentando login com:', username, password);
+
+    // Credenciais simples para teste
+    const validCredentials = [
+      { user: 'admin', pass: '123' },
+      { user: 'aprendiz', pass: 'becker' },
+      { user: 'user', pass: 'password' }
+    ];
+
+    const isValid = validCredentials.some(cred =>
+      cred.user === username && cred.pass === password
+    );
+
+    if (isValid) {
+      console.log('Login válido! Redirecionando...');
+      // Redireciona para a página do escritório
+      window.location.href = 'inicio.html';
+    } else {
+      console.log('Login inválido!');
+      errorMessage.style.display = 'block';
     }
   }
 
@@ -110,10 +126,9 @@ function login() {
   }
 }
 
-// Fechar modal ao clicar fora
+// Fechar modal ao clicar fora ou com ESC
 document.addEventListener('click', (e) => {
-  const modal = document.getElementById('loginModal');
-  if (modal && e.target === modal) {
+  if (e.target.classList.contains('modal-overlay')) {
     const loginComponent = document.querySelector('login-c');
     if (loginComponent) {
       loginComponent.hideModal();
@@ -121,7 +136,6 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// Fechar modal com ESC
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     const loginComponent = document.querySelector('login-c');

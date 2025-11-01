@@ -15,10 +15,10 @@ class Footer extends HTMLElement {
 
             <div class="menu">
               <ul><strong>Tópicos</strong></ul>
-                <li><a href="guia-basico.html">Guia Básico</a></li>
-                <li><a href="escritorio.html">Escritório</a></li>
-                <li><a href="deposito.html">Depósito</a></li>
-                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li class="scale"><a href="inicio.html">Pagina Inicial</a></li>
+                <li class="scale"><a href="escritorio.html">Escritório</a></li>
+                <li class="scale"><a href="deposito.html">Depósito</a></li>
+                <li class="scale"><a href="quem-somos.html">Quem Somos</a></li>
             </div>
 
              <div class="dev">
@@ -26,20 +26,20 @@ class Footer extends HTMLElement {
               <div class="social-media">
                 Juliano Kapelinski
                 <div class="sm-wrapper">
-                 <a href=""><img src="./images/linkedin.svg"></a>
-                 <a href=""><img src="./images/rede-social.svg"></a>
-                 <a href=""><img src="./images/instagram.svg"></a>
-                 <a href=""><img src="./images/facebook.svg"></a>
+                 <a class="scale" href=""><img src="./images/linkedin.svg"></a>
+                 <a class="scale" href=""><img src="./images/rede-social.svg"></a>
+                 <a class="scale" href=""><img src="./images/instagram.svg"></a>
+                 <a class="scale" href=""><img src="./images/facebook.svg"></a>
                 </div>
               </div>
 
               <div class="social-media">
                  Emily Zugel
                 <div class="sm-wrapper">
-                 <a href=""><img src="./images/linkedin.svg"></a>
-                 <a href=""><img src="./images/github.svg"></a>
-                 <a href=""><img src="./images/instagram.svg"></a>
-                 <a href=""><img src="./images/website.svg"></a>
+                 <a class="scale" href=""><img src="./images/linkedin.svg"></a>
+                 <a class="scale" href=""><img src="./images/github.svg"></a>
+                 <a class="scale" href=""><img src="./images/instagram.svg"></a>
+                 <a class="scale" href=""><img src="./images/website.svg"></a>
               </div>
 
             </div>
