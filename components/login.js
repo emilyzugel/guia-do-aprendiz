@@ -13,6 +13,7 @@ class LogIn extends HTMLElement {
             
             <div class="logo">
               <h2>Acesso Restrito</h2>
+              <img src="./images/becker-logo.svg" height="50px" width="auto">
               <p>Faça login para acessar o guia</p>
             </div>
 
