@@ -11,7 +11,11 @@ class Footer extends HTMLElement {
       <footer>
         <div class="container">
           <div class="top">
-            <strong>Guia do Aprendiz</strong>
+            <div class="logo">  
+              <strong>Guia do Aprendiz</strong>
+              <img src="./images/becker-logo.svg">
+              <a class="link" href="./index.html">Log out</a>
+            </div>
 
             <div class="menu">
               <ul><strong>Tópicos</strong></ul>

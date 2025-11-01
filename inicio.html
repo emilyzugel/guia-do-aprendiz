@@ -6,15 +6,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Escritório - Guia do Aprendiz</title>
   <link rel="stylesheet" href="styles/style.css">
+
+  <style>
+    .inicio .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .inicio .intro {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .inicio img {
+      height: 220px;
+    }
+
+    .inicio .first img {
+      width: 100%;
+      height: auto;
+      margin: 1rem 0;
+    }
+  </style>
 </head>
 
 <body>
   <navbar-c></navbar-c>
 
-  <main>
+  <section class="inicio">
     <div class="container">
-      <h1>Página Inicial</h1>
-  </main>
+
+      <div class="intro">
+        <h1>Informações básicas para o seu dia a dia nas Lojas Becker.</h1>
+        <img src="./images/vector-art.svg">
+      </div>
+
+      <div class="first">
+        <p>Este guia reúne orientações essenciais para o dia a dia dos aprendizes nas
+          Lojas Becker. Aqui, você encontrará instruções gerais que se aplicam a todos
+          os setores — desde as regras de ponto e vestimenta até boas práticas de
+          convivência e comportamento profissional.
+        </p>
+        <img src="./images/banner-aprendiz.jpg">
+      </div>
+  </section>
 
   <footer-c></footer-c>
 

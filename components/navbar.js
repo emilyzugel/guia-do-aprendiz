@@ -10,7 +10,7 @@ class Navbar extends HTMLElement {
     this.innerHTML = `
           <nav>
             <div class="container">
-              <h3>Guia do Aprendiz</h3>
+              <img class="scale" src="./images/becker-logo.svg">
               <div class="menu">
                 <ul>
                   <li class="scale"><a href="inicio.html">Pagina Inicial</a></li>
