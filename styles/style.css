@@ -193,8 +193,7 @@ footer img {
   width: auto;
 }
 
-div.dev>*,
-div.menu>* {
+div.dev>* {
   margin: 10px 0;
 }
 
