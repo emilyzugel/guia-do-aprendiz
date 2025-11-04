@@ -29,6 +29,7 @@ Trabalho desenvolvido para o Projeto Integrador do curso de Análise e Desenvolv
 
 ## Tecnologias Utilizadas
 
+- Figma
 - HTML5
 - CSS3
 - JavaScript (Web Components)

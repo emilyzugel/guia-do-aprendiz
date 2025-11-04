@@ -37,10 +37,10 @@ class Footer extends HTMLElement {
               <div class="social-media">
                  Emily Zugel
                 <div class="sm-wrapper">
-                 <a class="scale" href=""><img src="./images/linkedin.svg"></a>
-                 <a class="scale" href=""><img src="./images/github.svg"></a>
-                 <a class="scale" href=""><img src="./images/instagram.svg"></a>
-                 <a class="scale" href=""><img src="./images/website.svg"></a>
+                 <a class="scale" href="https://www.linkedin.com/in/emilyzugel/"><img src="./images/linkedin.svg"></a>
+                 <a class="scale" href="https://github.com/emilyzugel"><img src="./images/github.svg"></a>
+                 <a class="scale" href="https://www.instagram.com/_zpicyy/"><img src="./images/instagram.svg"></a>
+                 <a class="scale" href="https://emilyzugel.github.io/portifolio/"><img src="./images/website.svg"></a>
               </div>
 
             </div>
