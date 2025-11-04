@@ -22,7 +22,7 @@ Criar uma referência de como a tecnologia web pode otimizar processos de onboar
 
 Trabalho desenvolvido para o Projeto Integrador do curso de Análise e Desenvolvimento de Sistemas da URI - Universidade Regional Integrada.
 
-**Design by:** Juliano Kapelinski  
+**Design by:** Adriano Kapelinski  
 **Code by:** Emily Zugel
 
 **Link do Projeto:** [https://emilyzugel.github.io/guia-do-aprendiz/](https://emilyzugel.github.io/guia-do-aprendiz/)

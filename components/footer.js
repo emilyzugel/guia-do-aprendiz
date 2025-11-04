@@ -25,7 +25,7 @@ class Footer extends HTMLElement {
              <div class="dev">
               <h4>Desenvolvedores</h4>
               <div class="social-media">
-                Juliano Kapelinski
+                Adriano Kapelinski
                 <div class="sm-wrapper">
                  <a class="scale" href=""><img src="./images/linkedin.svg"></a>
                  <a class="scale" href=""><img src="./images/rede-social.svg"></a>
